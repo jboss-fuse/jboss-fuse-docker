@@ -44,8 +44,8 @@ Fuse is installed in the `/opt/jboss/jboss-fuse` directory.
 
 ## Source
 
-The source is [available on GitHub](https://github.com/fuse/fuse-docker).
+The source is [available on GitHub](https://github.com/jboss-fuse/jboss-fuse-docker).
 
 ## Issues
 
-Please report any issues or file RFEs on [GitHub](https://github.com/fuse/fuse-docker/issues).
+Please report any issues or file RFEs on [GitHub](https://github.com/jboss-fuse/jboss-fuse-docker/issues).
