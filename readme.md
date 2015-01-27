@@ -13,26 +13,29 @@ and have not exposed the web console port on the docker host.
 
 ## Extending the image
 
-To be able to create a management user to access the administration console create a Dockerfile with the
-following content:
 
-    FROM jboss/jboss-fuse-full
-    COPY users.properties /opt/jboss/jboss-fuse/etc/
-    
-Then create a `users.properties` file that contains your users, passwords, and roles.  For example:
+
+First, create a `users.properties` file that contains your users, passwords, and roles.  For example:
 
     admin=password,Operator, Maintainer, Deployer, Auditor, Administrator, SuperUser
     dev=password,Operator, Maintainer, Deployer
 
-Then you can build the image:
+
+Then create a Dockerfile with the following content:
+
+    FROM jboss/jboss-fuse-full
+    COPY users.properties /opt/jboss/jboss-fuse/etc/
+    
+
+Then you can build a new Docker image using the following commnad:
 
     docker build --tag=jboss/jboss-fuse-full-admin .
 
-Run it:
+Run your new image:
 
     docker run -it -p 8181:8181 jboss/jboss-fuse-full-admin
 
-The administration console should be available at http://localhost:8181.
+The administration console should be available at [http://localhost:8181/hawtio](http://localhost:8181/hawtio)
 
 ## Ports Opened by Fuse
 
@@ -42,7 +45,7 @@ Those ports are:
 * 8181 - Web access (also hosts the Fuse admin console).
 * 8101 - SSH Karaf console access
 
-If you add the ``-p 8101:8101` to your `docker run` command, then you should be able to load `http://localhost:81818/hawtio` in your web browser to mange the Fuse server.
+If you add the ``-p 8181:8181` to your `docker run` command, then you should be able to load [http://localhost:8181/hawtio](http://localhost:8181/hawtio) in your web browser to mange the Fuse server.
 
 If you add the ``-p 8101:8101` to your `docker run` command, then you should be able to ssh into the Karaf container using a command similar to: `ssh admin@localhost -p 8101`
 
