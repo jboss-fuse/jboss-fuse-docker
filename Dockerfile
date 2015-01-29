@@ -21,7 +21,7 @@ ENV FUSE_PUBLIC_STOMP_SSL_PORT 61614
 COPY install.sh /opt/jboss/install.sh
 RUN /opt/jboss/install.sh
 
-EXPOSE 1099 2181 8101 8181 9300 9301 44444 61616 1883 5672 61613 61617 8883 5671 61614
+EXPOSE 8181 8101 1099 44444 61616 1883 5672 61613 61617 8883 5671 61614
 
 #
 # The following directories can hold config/data, so lets suggest the user
