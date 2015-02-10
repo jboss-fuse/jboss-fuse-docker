@@ -32,7 +32,7 @@ rm -rf jboss-fuse/quickstarts
 # Let the karaf container name/id come from setting the FUSE_KARAF_NAME && FUSE_RUNTIME_ID env vars
 # default to using the container hostname.
 sed -i -e 's/environment.prefix=FABRIC8_/environment.prefix=FUSE_/' jboss-fuse/etc/system.properties
-sed -i -e '/karaf.name=root/d' jboss-fuse/etc/system.properties
+sed -i -e '/karaf.name = root/d' jboss-fuse/etc/system.properties
 sed -i -e '/runtime.id=/d' jboss-fuse/etc/system.properties
 echo '
 if [ -z "$FUSE_KARAF_NAME" ]; then 
