@@ -31,6 +31,6 @@ VOLUME /opt/jboss/jboss-fuse/etc
 VOLUME /opt/jboss/jboss-fuse/data
 VOLUME /opt/jboss/jboss-fuse/deploy
 
-# lets default to the jboss-fuse dir so folks can more easily navigate to the data/logs
+# lets default to the jboss-fuse dir so folks can more easily navigate to around the server install
 WORKDIR /opt/jboss/jboss-fuse
-CMD ${HOME}/jboss-fuse/bin/fuse server
+CMD /opt/jboss/jboss-fuse/bin/fuse server
