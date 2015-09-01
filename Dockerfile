@@ -4,7 +4,7 @@ FROM jboss/base-jdk:7
 MAINTAINER Hiram Chirino <hchirino@redhat.com>
 
 # Set the FUSE_VERSION env variable
-ENV FUSE_VERSION 6.2.0.redhat-059
+ENV FUSE_VERSION 6.2.0.redhat-099
 
 # If the container is launched with re-mapped ports, these ENV vars should
 # be set to the remapped values.
